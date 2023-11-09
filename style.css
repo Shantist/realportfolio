@@ -1,0 +1,326 @@
+body{
+    background-color: #FFF9EC;
+    width: 100%;
+}
+.contain{
+    background-color: #ffffff;
+    height: 50px;
+    width: 600px;
+    margin: 30px 30px;
+}
+.contain a{
+    text-decoration: none;
+    color: #000000;
+    text-transform: none;
+    transition: 0.25s ease;
+    font-size: 30px;
+    
+}   
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+ul li{
+    text-decoration: none;
+    margin: 0 0.75em 0 0.75em;
+}
+ul:hover a {
+    color: #FFF9EC;
+}
+ul:hover a:hover{
+    color: brown;
+    box-shadow: 0 2px 0 0 currentColor;
+}
+#home{
+    margin-top: -50px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: clamp(3rem, 8.163rem + -16.5217vw, 0.625rem);
+}
+
+
+/* ID Seclector */
+
+#profile{
+    margin-top: 70px;
+    height: 200px;
+    width: 100%;
+    max-width: 300px;
+    -webkit-box-shadow:0px 0px 17px 0px rgba(251,99,117,1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+    box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+}
+#landing{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(3rem, 6.3594rem + -10.75vw, 0.3125rem);
+}
+
+#About{
+    margin-top: 200px;
+    margin-left: 50px;
+    width: 100%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.containerup{
+    height: 200px;
+    margin-left: 10px;
+    flex-basis: 50%;
+    max-width: 800px;
+    width: 100%;
+   
+}
+#container1{
+    flex-basis: 70%;
+    margin-top: -200px;
+    margin-left: 650px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    transition: all 400ms;
+}
+#container1 .box{
+    position: relative;
+    background: var(--img) center center;
+    background-size: cover;
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow:0px 0px 17px 0px rgba(251,99,117,1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+    box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+}
+
+#container1 .box::after{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    background: #FCB1A6;
+    color: #000000;
+    padding: 10px 10px 10px 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#container1 .box:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+#container1 .box:hover{
+    filter: grayscale(0%) opacity(100%);
+}
+
+#container1:has(.box-1:hover){
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+#container1:has(.box-2:hover){
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+#container1:has(.box-3:hover){
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.box:nth-child(odd){
+    transform: translateY(-16px);
+}
+
+.box:nth-child(even){
+    transform: translateY(16px);
+}
+
+#Teams{
+    margin-top: 70px;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    width: 100% ;
+    max-width: 900px;
+    
+}
+section .card{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    transition: 1 ease;
+    background-color: #efa6c053;
+}
+section .card .box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+    -webkit-box-shadow:0px 0px 17px 0px rgba(251,99,117,1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+    box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+}
+section .card:hover .box{
+    transform: rotateY(180deg);
+}
+section .card .box .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .card .box .contentbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fb637595;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+section .card .box .contentbx div{
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient( 45deg, #E3FAFC, #FFDCCC);
+    transform: rotateZ(100px);
+}
+section .contentbx h2{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+section .card .box .contentbx div p{
+    color: #000000;
+    font-size: 16px;
+}
+#Service{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    
+}
+
+.container2{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.container2 .card{
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: #FCB1A6;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 17px 0px rgba(255,191,255,1);
+    transition: o.3s ease-in-out;
+}
+
+.container2 .card:hover{
+    height: 420px;
+}
+
+.container2 .card .img{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    -webkit-box-shadow:0px 0px 17px 0px rgba(251,99,117,1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+    box-shadow: 0px 0px 17px 0px rgba(251,99,117,1);
+}
+
+.container2 .card .img img{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.container2 .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container2 .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+#Contact{
+
+}
+/* tablet*/
+@media screen and (max-width: 768px){
+    #home{
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    #containerup{
+        flex-direction: column;
+        margin: auto;
+    }
+    #container1{
+        flex-direction: column;
+        margin: auto;
+    }
+}
+/*phone*/
+@media screen and (max-width: 320px) {
+    .container{
+        flex-direction: column;
+    }
+}
